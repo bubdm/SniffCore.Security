@@ -1,11 +1,11 @@
-SniffCore.Networking
+SniffCore.Security
 ===
 
-SniffCore.Networking provides methods and objects for a more easy networking communication.
+SniffCore.Security provides way to secure data and strings.
 
 ## How To
-* [GitHub Wiki](https://github.com/devicenator/SniffCore.Networking/wiki)
-* [Website](http://my-libraries.com/wiki/SniffCore.Networking)
+* [GitHub Wiki](https://github.com/devicenator/SniffCore.Security/wiki)
+* [Website](http://my-libraries.com/wiki/SniffCore.Security)
 
 ## License
 
