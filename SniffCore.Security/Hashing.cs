@@ -14,6 +14,40 @@ namespace SniffCore.Security
     /// <summary>
     ///     Provides methods to hash data.
     /// </summary>
+    /// <example>
+    ///     <code lang="csharp">
+    /// <![CDATA[
+    /// public void ViewModel : ObservableObject
+    /// {
+    ///     public IHashing _hashing;
+    /// 
+    ///     public ViewModel(IHashing hashing)
+    ///     {
+    ///         _hashing = hashing;
+    ///     }
+    /// 
+    ///     public string SavePassword(string userName, string password)
+    ///     {
+    ///         var data = _hashing.GenerateSecureHash(password);
+    ///         using var userRepo = Context.GetRepo<UserRepository>();
+    ///         var entity = userRepo.GetUser(userName);
+    ///         entity.Password = data.Value;
+    ///         entity.Salt = data.Salt;
+    ///         userRepo.SubmitChanges();
+    ///     }
+    /// 
+    ///     public bool ValidatePassword(string userName, string password)
+    ///     {
+    ///         using var userRepo = Context.GetRepo<UserRepository>();
+    ///         using var userRepo = Context.GetRepo<UserRepository>();
+    ///         var entity = userRepo.GetUser(userName);
+    ///         var hashedPassword = _hashing.GenerateSecureHash(password, entity.Salt);
+    ///         return hashedPassword == entity.Password;
+    ///     }
+    /// }
+    /// ]]>
+    /// </code>
+    /// </example>
     public class Hashing : IHashing
     {
         private Func<HashAlgorithm> _factory;

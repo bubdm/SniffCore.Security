@@ -11,6 +11,28 @@ namespace SniffCore.Security
     /// <summary>
     ///     Generates a security token.
     /// </summary>
+    /// <example>
+    ///     <code lang="csharp">
+    /// <![CDATA[
+    /// public void ViewModel : ObservableObject
+    /// {
+    ///     public ITokenGenerator _tokenGenerator;
+    /// 
+    ///     public ViewModel(ITokenGenerator tokenGenerator)
+    ///     {
+    ///         _tokenGenerator = tokenGenerator;
+    ///     }
+    /// 
+    ///     public string GetNewToken(string userName)
+    ///     {
+    ///         using var userRepo = Context.GetRepo<UserRepository>();
+    ///         var entity = userRepo.GetUser(userName);
+    ///         return entity.IsActive() ? _tokenGenerator.Generate(64) : null;
+    ///     }
+    /// }
+    /// ]]>
+    /// </code>
+    /// </example>
     public class TokenGenerator : ITokenGenerator
     {
         /// <summary>
