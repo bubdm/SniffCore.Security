@@ -151,6 +151,6 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="length">The length of the salt to generate.</param>
         /// <returns>The generated salt.</returns>
-        byte[] GenerateSalt(int length);
+        byte[] GenerateSalt(uint length);
     }
 }

@@ -21,6 +21,6 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="length">The length of the security token.</param>
         /// <returns>The generated security token.</returns>
-        string Generate(int length);
+        string Generate(uint length);
     }
 }

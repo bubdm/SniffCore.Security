@@ -282,7 +282,7 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="length">The length of the salt to generate.</param>
         /// <returns>The generated salt.</returns>
-        public byte[] GenerateSalt(int length)
+        public byte[] GenerateSalt(uint length)
         {
             var salt = new byte[length];
             using var random = new RNGCryptoServiceProvider();

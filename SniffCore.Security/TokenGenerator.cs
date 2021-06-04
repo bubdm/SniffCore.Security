@@ -49,7 +49,7 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="length">The length of the security token.</param>
         /// <returns>The generated security token.</returns>
-        public string Generate(int length)
+        public string Generate(uint length)
         {
             var randomNumber = new byte[length];
             using var rng = RandomNumberGenerator.Create();
