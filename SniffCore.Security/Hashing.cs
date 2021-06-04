@@ -67,8 +67,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="value">The value to hash.</param>
         /// <returns>The hashing data.</returns>
+        /// <exception cref="ArgumentNullException">value is null.</exception>
         public HashData GenerateSecureHash(string value)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             var salt = GenerateSalt();
             var hashedValue = GenerateSHA256Hash(value + Convert.ToBase64String(salt));
             return new HashData
@@ -84,8 +88,15 @@ namespace SniffCore.Security
         /// <param name="value">The value to hash.</param>
         /// <param name="salt">The salt to use when hashing.</param>
         /// <returns>The hashed value.</returns>
+        /// <exception cref="ArgumentNullException">value is null.</exception>
+        /// <exception cref="ArgumentNullException">salt is null.</exception>
         public string GenerateSecureHash(string value, byte[] salt)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+            if (salt == null)
+                throw new ArgumentNullException(nameof(salt));
+
             return GenerateSHA256Hash(value + Convert.ToBase64String(salt));
         }
 
@@ -94,8 +105,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="value">The value to hash.</param>
         /// <returns>The hashed value.</returns>
+        /// <exception cref="ArgumentNullException">value is null.</exception>
         public string GenerateSHA256Hash(string value)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             return GenerateSHA256Hash(Encoding.UTF8.GetBytes(value));
         }
 
@@ -104,8 +119,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="bytes">The bytes to hash.</param>
         /// <returns>The hashed bytes.</returns>
+        /// <exception cref="ArgumentNullException">bytes is null.</exception>
         public string GenerateSHA256Hash(byte[] bytes)
         {
+            if (bytes == null)
+                throw new ArgumentNullException(nameof(bytes));
+
             return GenerateCustomHash(SHA256.Create(), bytes);
         }
 
@@ -114,8 +133,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="stream">The stream with the data to hash.</param>
         /// <returns>The hashed stream content data.</returns>
+        /// <exception cref="ArgumentNullException">stream is null.</exception>
         public string GenerateSHA256Hash(Stream stream)
         {
+            if (stream == null)
+                throw new ArgumentNullException(nameof(stream));
+
             return GenerateCustomHash(SHA256.Create(), stream);
         }
 
@@ -124,8 +147,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="value">The value to hash.</param>
         /// <returns>The hashed value.</returns>
+        /// <exception cref="ArgumentNullException">value is null.</exception>
         public string GenerateSHA384Hash(string value)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             return GenerateSHA384Hash(Encoding.UTF8.GetBytes(value));
         }
 
@@ -134,8 +161,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="bytes">The bytes to hash.</param>
         /// <returns>The hashed bytes.</returns>
+        /// <exception cref="ArgumentNullException">bytes is null.</exception>
         public string GenerateSHA384Hash(byte[] bytes)
         {
+            if (bytes == null)
+                throw new ArgumentNullException(nameof(bytes));
+
             return GenerateCustomHash(SHA384.Create(), bytes);
         }
 
@@ -144,8 +175,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="stream">The stream with the data to hash.</param>
         /// <returns>The hashed stream content data.</returns>
+        /// <exception cref="ArgumentNullException">stream is null.</exception>
         public string GenerateSHA384Hash(Stream stream)
         {
+            if (stream == null)
+                throw new ArgumentNullException(nameof(stream));
+
             return GenerateCustomHash(SHA384.Create(), stream);
         }
 
@@ -154,8 +189,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="value">The value to hash.</param>
         /// <returns>The hashed value.</returns>
+        /// <exception cref="ArgumentNullException">value is null.</exception>
         public string GenerateSHA512Hash(string value)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             return GenerateSHA512Hash(Encoding.UTF8.GetBytes(value));
         }
 
@@ -164,8 +203,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="bytes">The bytes to hash.</param>
         /// <returns>The hashed bytes.</returns>
+        /// <exception cref="ArgumentNullException">bytes is null.</exception>
         public string GenerateSHA512Hash(byte[] bytes)
         {
+            if (bytes == null)
+                throw new ArgumentNullException(nameof(bytes));
+
             return GenerateCustomHash(SHA512.Create(), bytes);
         }
 
@@ -174,8 +217,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="stream">The stream with the data to hash.</param>
         /// <returns>The hashed stream content data.</returns>
+        /// <exception cref="ArgumentNullException">stream is null.</exception>
         public string GenerateSHA512Hash(Stream stream)
         {
+            if (stream == null)
+                throw new ArgumentNullException(nameof(stream));
+
             return GenerateCustomHash(SHA512.Create(), stream);
         }
 
@@ -184,8 +231,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="value">The value to hash.</param>
         /// <returns>The hashed value.</returns>
+        /// <exception cref="ArgumentNullException">value is null.</exception>
         public string GenerateMD5Hash(string value)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             return GenerateMD5Hash(Encoding.UTF8.GetBytes(value));
         }
 
@@ -194,8 +245,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="bytes">The bytes to hash.</param>
         /// <returns>The hashed bytes.</returns>
+        /// <exception cref="ArgumentNullException">bytes is null.</exception>
         public string GenerateMD5Hash(byte[] bytes)
         {
+            if (bytes == null)
+                throw new ArgumentNullException(nameof(bytes));
+
             return GenerateCustomHash(MD5.Create(), bytes);
         }
 
@@ -204,8 +259,12 @@ namespace SniffCore.Security
         /// </summary>
         /// <param name="stream">The stream with the data to hash.</param>
         /// <returns>The hashed stream content data.</returns>
+        /// <exception cref="ArgumentNullException">stream is null.</exception>
         public string GenerateMD5Hash(Stream stream)
         {
+            if (stream == null)
+                throw new ArgumentNullException(nameof(stream));
+
             return GenerateCustomHash(MD5.Create(), stream);
         }
 
@@ -219,8 +278,12 @@ namespace SniffCore.Security
         ///     needs to be called first.
         /// </exception>
         /// <exception cref="NullReferenceException">The factory set by <see cref="SetCustomHashingMethod" /> returns null.</exception>
+        /// <exception cref="ArgumentNullException">value is null.</exception>
         public string GenerateCustomHash(string value)
         {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
             return GenerateCustomHash(Encoding.UTF8.GetBytes(value));
         }
 
@@ -234,8 +297,12 @@ namespace SniffCore.Security
         ///     needs to be called first.
         /// </exception>
         /// <exception cref="NullReferenceException">The factory set by <see cref="SetCustomHashingMethod" /> returns null.</exception>
+        /// <exception cref="ArgumentNullException">bytes is null.</exception>
         public string GenerateCustomHash(byte[] bytes)
         {
+            if (bytes == null)
+                throw new ArgumentNullException(nameof(bytes));
+
             if (_factory == null)
                 throw new NullReferenceException("The custom hash algorithm is not set. SetCustomHashingMethod needs to be called first.");
 
@@ -256,8 +323,12 @@ namespace SniffCore.Security
         ///     needs to be called first.
         /// </exception>
         /// <exception cref="NullReferenceException">The factory set by <see cref="SetCustomHashingMethod" /> returns null.</exception>
+        /// <exception cref="ArgumentNullException">stream is null.</exception>
         public string GenerateCustomHash(Stream stream)
         {
+            if (stream == null)
+                throw new ArgumentNullException(nameof(stream));
+
             if (_factory == null)
                 throw new NullReferenceException("The custom hash algorithm is not set. SetCustomHashingMethod needs to be called first.");
 
