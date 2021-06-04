@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SniffCore.Security", "SniffCore.Security\SniffCore.Security.csproj", "{1AFD9E81-27C6-494B-AAD6-8AC8EEB1DE27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SniffCore.Security", "SniffCore.Security\SniffCore.Security.csproj", "{1AFD9E81-27C6-494B-AAD6-8AC8EEB1DE27}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E4A863BC-09AB-4261-B7EB-9405CB7B0C59}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SniffCore.Security.Tests", "SniffCore.Security.Tests\SniffCore.Security.Tests.csproj", "{CAC974F8-14A2-465B-8180-9218536686E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1AFD9E81-27C6-494B-AAD6-8AC8EEB1DE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AFD9E81-27C6-494B-AAD6-8AC8EEB1DE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AFD9E81-27C6-494B-AAD6-8AC8EEB1DE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC974F8-14A2-465B-8180-9218536686E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC974F8-14A2-465B-8180-9218536686E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC974F8-14A2-465B-8180-9218536686E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC974F8-14A2-465B-8180-9218536686E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
