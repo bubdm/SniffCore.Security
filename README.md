@@ -4,7 +4,7 @@ SniffCore.Security
 SniffCore.Security provides way to secure data and strings.
 
 ## How To
-* [Documentation](http://wiki.sniffcore.com)
+* [Documentation](http://documentation.sniffcore.com/)
 * [Website](http://sniffcore.com)
 
 ## License
