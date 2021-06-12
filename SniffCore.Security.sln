@@ -7,11 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SniffCore.Security", "Sniff
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E4A863BC-09AB-4261-B7EB-9405CB7B0C59}"
 	ProjectSection(SolutionItems) = preProject
+		Icon.png = Icon.png
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SniffCore.Security.Tests", "SniffCore.Security.Tests\SniffCore.Security.Tests.csproj", "{CAC974F8-14A2-465B-8180-9218536686E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SniffCore.Security.Tests", "SniffCore.Security.Tests\SniffCore.Security.Tests.csproj", "{CAC974F8-14A2-465B-8180-9218536686E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
