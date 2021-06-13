@@ -4,6 +4,7 @@ SniffCore.Security
 SniffCore.Security provides way to secure data and strings.
 
 ## How To
+* [NuGet](https://www.nuget.org/packages/SniffCore.Security)
 * [Documentation](http://documentation.sniffcore.com/)
 * [Website](http://sniffcore.com)
 
